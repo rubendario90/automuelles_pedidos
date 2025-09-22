@@ -1,0 +1,107 @@
+/* Contenedor principal con Sidebar fijo */
+.MarcarDomicilio-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar (solo desktop) */
+.MarcarDomicilio-container .navbar {
+  width: 70px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+}
+
+/* Contenido principal */
+.MarcarDomicilio-main {
+  flex: 1;
+  margin-left: 70px; /* espacio para el sidebar */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Título */
+.MarcarDomicilio-main h2 {
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulario */
+.MarcarDomicilio-main form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.MarcarDomicilio-main label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.MarcarDomicilio-main input {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Botón */
+.MarcarDomicilio-main .btn-primary {
+  background-color: #0d6efd;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Estado del documento */
+.MarcarDomicilio-main .alert {
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+}
+
+/* 📱 Responsive - en celulares */
+@media (max-width: 768px) {
+  .MarcarDomicilio-container {
+    flex-direction: column;
+  }
+
+  /* Sidebar arriba en móviles */
+  .MarcarDomicilio-container .navbar {
+    width: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  /* Contenido sin margen lateral */
+  .MarcarDomicilio-main {
+    flex: 1;
+    margin-left: 70px; 
+    padding: 20px;
+  }
+
+  /* Formulario ocupa todo el ancho */
+  .MarcarDomicilio-main form {
+    padding: 15px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Botón más grande */
+  .MarcarDomicilio-main .btn-primary {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}

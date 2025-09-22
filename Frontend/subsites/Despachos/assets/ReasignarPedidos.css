@@ -1,0 +1,78 @@
+/* Contenedor principal con Sidebar a la izquierda */
+.Despachos-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa; /* gris suave */
+  }
+  
+  /* Sidebar (el componente Navbar ya está fijo en la izquierda) */
+  .Despachos-container .navbar {
+    width: 70px; /* mismo ancho de tu sidebar */
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+  
+  /* Contenido principal a la derecha */
+  .main-content {
+    flex: 1;
+    margin-left: 70px; /* desplazamiento igual al ancho del sidebar */
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Encabezados de factura */
+  .factura-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+  }
+  
+  .factura-header h3 {
+    margin: 0;
+    color: #0d6efd; /* azul bootstrap */
+  }
+  
+  /* Sección de detalles */
+  .factura-references,
+  .factura-info {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Tabla de facturas */
+  .table {
+    font-size: 0.9rem;
+  }
+  
+  .table thead {
+    background: #0d6efd;
+    color: white;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f5f9;
+    cursor: pointer;
+  }
+  
+  /* Botones */
+  .btn {
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .btn-success {
+    background-color: #198754;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  

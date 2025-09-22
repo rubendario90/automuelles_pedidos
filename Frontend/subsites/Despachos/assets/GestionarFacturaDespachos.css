@@ -1,0 +1,67 @@
+/* Contenedor principal con Sidebar fijo */
+.PedidosEntregados-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa; /* gris claro */
+  }
+  
+  /* Sidebar */
+  .PedidosEntregados-container .navbar {
+    width: 70px; /* ancho del sidebar */
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+  
+  /* Contenido principal */
+  .PedidosEntregados-main {
+    flex: 1;
+    margin-left: 70px; /* se ajusta al ancho del sidebar */
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Títulos */
+  .PedidosEntregados-main h2 {
+    font-weight: 600;
+    color: #0d6efd; /* azul bootstrap */
+    text-align: center;
+  }
+  
+  /* Tabla de pedidos */
+  .PedidosEntregados-main .table {
+    font-size: 0.9rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .PedidosEntregados-main .table thead {
+    background: #0d6efd;
+    color: white;
+  }
+  
+  .PedidosEntregados-main .table tbody tr:hover {
+    background-color: #f1f5f9;
+    cursor: pointer;
+  }
+  
+  /* Botones */
+  .PedidosEntregados-main .btn {
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .PedidosEntregados-main .btn-success {
+    background-color: #198754;
+  }
+  
+  .PedidosEntregados-main .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .PedidosEntregados-main .btn-primary {
+    background-color: #0d6efd;
+  }
+  

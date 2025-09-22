@@ -1,0 +1,130 @@
+/* Contenedor principal que se adapta al sidebar */
+.Historial-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px; /* ancho del sidebar */
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f9fafc;
+  }
+  
+  /* Contenido principal */
+  .historial-content {
+    flex-grow: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Estilo para tablas */
+  .historial-content table {
+    font-size: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Botones dentro de historial */
+  .historial-content .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+  
+  .historial-content .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal propio */
+  .Historial-container .modal-content {
+    border-radius: 12px;
+    padding: 15px;
+  }
+  
+  .Historial-container .modal-header {
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+  }
+
+/* 📱 Ajustes solo para móviles */
+@media (max-width: 768px) {
+  /* Contenedor principal: reducir margen del sidebar */
+  .Historial-container {
+    margin-left: 80px; /* ancho reducido para dar espacio al contenido */
+    padding: 10px;
+  }
+
+  /* Ajustar título */
+  .historial-content h2 {
+    font-size: 20px;
+  }
+  .historial-content p {
+    font-size: 14px;
+  }
+
+  /* Input de filtro ocupa todo el ancho */
+  .historial-content .form-control {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* Tabla responsiva -> formato tipo tarjeta */
+  .historial-content table,
+  .historial-content thead,
+  .historial-content tbody,
+  .historial-content th,
+  .historial-content td,
+  .historial-content tr {
+    display: block;
+    width: 100%;
+  }
+
+  .historial-content thead {
+    display: none; /* ocultar cabecera */
+  }
+
+  .historial-content tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 12px;
+  }
+
+  .historial-content td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .historial-content td:last-child {
+    border-bottom: none;
+  }
+
+  .historial-content td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+  }
+
+  .historial-content td {
+    flex: 2;
+    text-align: right;
+  }
+
+  /* Botones grandes y táctiles */
+  .historial-content .btn {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+  

@@ -1,0 +1,76 @@
+/* Fondo del contenedor principal */
+.bodega-jefe-container {
+  background: linear-gradient(235deg, rgba(13, 83, 149, 0.8), rgba(13, 83, 149, 0) 33%), 
+              linear-gradient(45deg, rgba(222, 222, 222, 0.8), rgba(222, 222, 222, 0) 33%), 
+              linear-gradient(rgba(220, 220, 220, 0.66)); /* Apply gradient colors */
+  min-height: 100vh; /* Ensure the background covers the entire viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+  .btn-custom {
+    background-color: #0D5395; /* Color personalizado */
+    border-color: #0D5395; /* Color del borde */
+    color: #f5f7f8; /* Color del texto */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0D5395; /* Color al pasar el cursor */
+    border-color: #0D5395;
+  }
+  
+  /* Estilo personalizado para el encabezado de la tarjeta */
+  .bg-custom {
+    background-color: #0D5395; /* Color personalizado */
+  }
+
+  .text-custom-color {
+    color: #0D5395;
+  }
+
+ /* Sidebar styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar to the left */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  width: 60px; /* Default width */
+  background-color: #0D5395; /* Sidebar background color */
+  transition: width 0.3s ease; /* Smooth transition for expansion */
+  z-index: 1000; /* Ensure the sidebar is above other elements */
+}
+
+.sidebar.expanded {
+  width: 200px; /* Expanded width */
+}
+
+/* Main content styles */
+/* Main content styles */
+.main-content {
+  margin-left: 60px; /* Offset by the default sidebar width */
+  flex-grow: 1;
+  padding: 80px 20px 20px; /* Add top padding to account for the navbar height */
+  transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+.main-content.expanded {
+  margin-left: 200px; /* Offset by the expanded sidebar width */
+  padding: 80px 20px 20px; /* Ensure consistent top padding */
+}
+/* Card styles */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  font-size: 1rem;
+}
+
+.card-body {
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  font-size: 0.8rem;
+}

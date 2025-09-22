@@ -1,0 +1,99 @@
+/* Navbar.css */
+
+.app-nav {
+  position: fixed;
+  top: 0; /* Move the navbar to the top */
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0 0 12px 12px; /* Adjust border radius for top placement */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow below the navbar */
+  z-index: 1000;
+}
+
+.app-nav__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-nav__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #748394;
+  transition: color 0.3s ease;
+}
+
+.app-nav__list-item--active {
+  color: #6336f6;
+}
+
+.app-nav-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-nav-link span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Hide or adjust the ios-bar */
+.ios-bar {
+  display: none; 
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position below the parent item */
+  left: 0; /* Align to the left of the parent item */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  z-index: 1000;
+  display: block; /* Ensure the dropdown is visible */
+}
+
+.app-nav__list-item {
+  position: relative; /* Ensure dropdown is positioned relative to the parent */
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #748394;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #6336f6;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

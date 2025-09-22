@@ -1,0 +1,61 @@
+/* Home.css */
+
+.card-body-notas, .card-body-notas p {
+    color: #fff !important;
+  }
+
+.custom-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .name-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .btn-contact {
+    background-color: #38d39f;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-contact:hover {
+    background-color: #2bbf8f;
+  }
+  
+  .card-body-notas p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+  }
+  
+  .card-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .badge.cantidad-badge-Notas {
+    background: #ffc107 !important; /* amarillo Bootstrap */
+    color: #212529 !important;      /* texto oscuro */
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 0.5em;
+    display: inline-block;
+    float: none !important;
+    position: static !important;
+  }

@@ -1,0 +1,80 @@
+/* Contenedor principal con Sidebar fijo */
+.AsignarPedidos-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  /* Sidebar */
+  .AsignarPedidos-container .navbar {
+    width: 70px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+  }
+  
+  /* Contenido principal */
+  .AsignarPedidos-main {
+    flex: 1;
+    margin-left: 70px; /* espacio para el sidebar */
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Tarjeta */
+  .AsignarPedidos-main .card {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Título */
+  .AsignarPedidos-main h3 {
+    font-weight: 600;
+    color: #0d6efd;
+  }
+  
+  /* Select */
+  .AsignarPedidos-main .form-select {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  
+  /* Botón */
+  .AsignarPedidos-main .btn-success {
+    background-color: #198754;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .AsignarPedidos-main .btn-success:hover {
+    background-color: #157347;
+  }
+  
+  /* Responsive - en celulares el sidebar pasa arriba */
+  @media (max-width: 768px) {
+    .AsignarPedidos-container {
+      flex-direction: column;
+    }
+  
+    .AsignarPedidos-container .navbar {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  
+    .AsignarPedidos-main {
+      margin-left: 0;
+      padding: 15px;
+    }
+  
+    .AsignarPedidos-main .card {
+      padding: 10px;
+    }
+  }

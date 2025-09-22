@@ -1,0 +1,82 @@
+.login-container {
+    background: linear-gradient(235deg, rgba(13, 83, 149, 0.8), rgba(13, 83, 149, 0) 33%), 
+                linear-gradient(45deg, rgba(222, 222, 222, 0.8), rgba(222, 222, 222, 0) 33%), 
+                linear-gradient(rgba(220, 220, 220, 0.66)); /* Apply gradient colors */
+    color: white; /* Texto blanco */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Centrar texto */
+    min-height: 100vh; /* Ensure the background covers the entire viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .login-container h1 {
+    font-size: 2rem; /* Tamaño grande para el título */
+    margin-bottom: 20px;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos */
+  }
+  
+  .login-container label {
+    font-size: 1.2rem; /* Tamaño más grande para las etiquetas */
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Alinear a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+  }
+  
+  .login-container input {
+    font-size: 1rem; /* Tamaño más grande para los inputs */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 400px; /* Ancho máximo */
+  }
+  
+  .login-container button {
+    font-size: 1.2rem; /* Tamaño más grande para los botones */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 400px; /* Ancho máximo */
+  }
+  
+  .login-container button[type="submit"] {
+    background-color: #F5BF25; /* Botón amarillo */
+    color: #0D5395; /* Texto azul */
+  }
+  
+  .login-container button[type="submit"]:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .register-button {
+    background-color: transparent;
+    color: #F5BF25; /* Texto amarillo */
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem; /* Tamaño más grande */
+  }
+  
+  .register-button:hover {
+    text-decoration: underline;
+  }

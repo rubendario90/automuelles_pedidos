@@ -1,0 +1,33 @@
+.with-sidebar {
+  flex: 1;
+  margin-left: 70px; /* espacio para el sidebar */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* For mobile screens, adjust layout */
+@media (max-width: 768px) {
+  .descargar-factura-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .descargar-factura-card {
+    margin-top: 10px; /* Provide spacing from the top */
+    padding: 15px; /* Adjust padding for better space utilization */
+  }
+
+  .pdf-preview {
+    height: 300px; /* Adjust iframe height for smaller screens */
+  }
+
+  .btn-primary {
+    width: 100%; /* Full width button for mobile devices */
+  }
+  .with-sidebar {
+    flex: 1;
+    margin-left: 70px; /* espacio para el sidebar */
+    padding: 20px;
+    overflow-y: auto;
+  }
+}

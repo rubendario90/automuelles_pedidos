@@ -1,0 +1,47 @@
+
+
+###################################
+
+
+USE [AutomuellesDiesel1];
+GO
+
+CREATE TRIGGER trg_InsertToFacturas
+ON [dbo].[TblDocumentos]
+AFTER INSERT
+AS
+BEGIN
+    -- Inserta los datos en la tabla facturas de Automuelles_Virtual solo si no existen y la transacción es 40, 42, 88 o 90
+    INSERT INTO [Automuelles_Virtual].[dbo].[facturas] ([transaccion], [documento], [created_at], [updated_at])
+    SELECT 
+        [IntTransaccion] AS transaccion,
+        [IntDocumento] AS documento,
+        GETDATE() AS created_at, -- Fecha actual para created_at
+        GETDATE() AS updated_at  -- Fecha actual para updated_at
+    FROM inserted
+    WHERE 
+        -- Solo incluir transacciones específicas
+        [IntTransaccion] IN (40, 42, 88, 90)
+        -- Excluir registros donde IntDocumento sea negativo
+        AND [IntDocumento] >= 0
+        -- Verificar que no exista ya en la tabla facturas
+        AND NOT EXISTS (
+            SELECT 1 
+            FROM [Automuelles_Virtual].[dbo].[facturas]
+            WHERE [transaccion] = inserted.[IntTransaccion]
+              AND [documento] = inserted.[IntDocumento]
+        );
+END;
+GO
+
+#######################
+
+USE [AutomuellesDiesel1];
+GO
+
+DROP TRIGGER trg_InsertToFacturas;
+GO
+
+
+#########################################
+

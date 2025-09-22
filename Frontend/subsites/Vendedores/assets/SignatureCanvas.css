@@ -1,0 +1,18 @@
+.signature-canvas-container-mostrador {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signature-canvas-mostrador {
+  width: 100% !important;
+  max-width: 600px;
+  height: 200px !important;
+  border: 2px solid #888;
+  border-radius: 8px;
+  background: #fff;
+  touch-action: none;
+  display: block;
+  margin: 0 auto;
+}

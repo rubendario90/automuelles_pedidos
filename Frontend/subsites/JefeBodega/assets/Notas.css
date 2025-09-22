@@ -1,0 +1,34 @@
+.notas-modal .card {
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 16px;
+    background: rgba(13, 83, 149, 0.8); /* Fondo personalizado */
+    color: #fff; /* Texto blanco para mejor contraste */
+}
+.notas-modal .card:hover {
+    transform: scale(1.02);
+}
+.notas-modal .card-title {
+    font-weight: bold;
+    color: #fff;
+}
+.notas-modal .card-body-Bodega p,
+.notas-modal .card-body-Bodega strong {
+    color: #fff;
+}
+.notas-modal .bg-light {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fff;
+}
+
+/* Badge personalizado para cantidades */
+.badge.cantidad-badge-Bodega-jefe {
+    background: #ffc107 !important; /* amarillo Bootstrap */
+    color: #212529 !important;      /* texto oscuro */
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 0.5em;
+    display: inline-block; /* <-- Asegura que esté en línea */
+    float: none !important; /* <-- Elimina cualquier float heredado */
+    position: static !important; /* <-- Elimina cualquier posición absoluta */
+  }

@@ -1,0 +1,180 @@
+/* Fondo del contenedor principal */
+.bodega-jefe-container {
+  background: linear-gradient(235deg, rgba(13, 83, 149, 0.8), rgba(13, 83, 149, 0) 33%), 
+              linear-gradient(45deg, rgba(222, 222, 222, 0.8), rgba(222, 222, 222, 0) 33%), 
+              linear-gradient(rgba(220, 220, 220, 0.66)); /* Apply gradient colors */
+  min-height: 100vh; /* Ensure the background covers the entire viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+  .btn-custom {
+    background-color: #0D5395; /* Color personalizado */
+    border-color: #0D5395; /* Color del borde */
+    color: #f5f7f8; /* Color del texto */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0D5395; /* Color al pasar el cursor */
+    border-color: #0D5395;
+  }
+  
+  /* Estilo personalizado para el encabezado de la tarjeta */
+  .bg-custom {
+    background-color: #0D5395; /* Color personalizado */
+  }
+
+  .text-custom-color {
+    color: #0D5395;
+  }
+
+ /* Sidebar styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar to the left */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  width: 60px; /* Default width */
+  background-color: #0D5395; /* Sidebar background color */
+  transition: width 0.3s ease; /* Smooth transition for expansion */
+  z-index: 1000; /* Ensure the sidebar is above other elements */
+}
+
+.sidebar.expanded {
+  width: 200px; /* Expanded width */
+}
+
+/* Main content styles */
+/* Main content styles */
+.main-content {
+  margin-left: 60px; /* Offset by the default sidebar width */
+  flex-grow: 1;
+  padding: 80px 20px 20px; /* Add top padding to account for the navbar height */
+  transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+.main-content.expanded {
+  margin-left: 200px; /* Offset by the expanded sidebar width */
+  padding: 80px 20px 20px; /* Ensure consistent top padding */
+}
+/* Card styles */
+/* Fondo del contenedor principal */
+.bodega-jefe-container {
+  background: linear-gradient(235deg, rgba(13, 83, 149, 0.8), rgba(13, 83, 149, 0) 33%), 
+              linear-gradient(45deg, rgba(222, 222, 222, 0.8), rgba(222, 222, 222, 0) 33%), 
+              linear-gradient(rgba(220, 220, 220, 0.66)); /* Apply gradient colors */
+  min-height: 100vh; /* Ensure the background covers the entire viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+  .btn-custom {
+    background-color: #0D5395; /* Color personalizado */
+    border-color: #0D5395; /* Color del borde */
+    color: #f5f7f8; /* Color del texto */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0D5395; /* Color al pasar el cursor */
+    border-color: #0D5395;
+  }
+  
+  /* Estilo personalizado para el encabezado de la tarjeta */
+  .bg-custom {
+    background-color: #0D5395; /* Color personalizado */
+  }
+
+  .text-custom-color {
+    color: #0D5395;
+  }
+
+ /* Sidebar styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar to the left */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  width: 60px; /* Default width */
+  background-color: #0D5395; /* Sidebar background color */
+  transition: width 0.3s ease; /* Smooth transition for expansion */
+  z-index: 1000; /* Ensure the sidebar is above other elements */
+}
+
+.sidebar.expanded {
+  width: 200px; /* Expanded width */
+}
+
+/* Main content styles */
+/* Main content styles */
+.main-content {
+  margin-left: 60px; /* Offset by the default sidebar width */
+  flex-grow: 1;
+  padding: 80px 20px 20px; /* Add top padding to account for the navbar height */
+  transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+.main-content.expanded {
+  margin-left: 200px; /* Offset by the expanded sidebar width */
+  padding: 80px 20px 20px; /* Ensure consistent top padding */
+}
+/* Modern Card Styles */
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(13, 83, 149, 0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+  border: none;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  background: #fff;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(13, 83, 149, 0.18), 0 3px 12px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+.card-header.bg-custom {
+  background: linear-gradient(90deg, #0D5395 80%, #1e90ff 100%);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+  padding: 1rem 1.2rem;
+}
+
+.card-title.text-primary {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #0D5395 !important;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-footer {
+  background: #f7fafd;
+  border-top: none;
+  font-size: 0.9rem;
+  color: #0D5395;
+  padding: 0.7rem 1.2rem;
+}
+
+.btn-custom {
+  background: linear-gradient(90deg, #0D5395 70%, #1e90ff 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(13, 83, 149, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(90deg, #1e90ff 70%, #0D5395 100%);
+  box-shadow: 0 4px 16px rgba(13, 83, 149, 0.18);
+}
