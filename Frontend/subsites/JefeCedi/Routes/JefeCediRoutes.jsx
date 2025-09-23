@@ -4,7 +4,7 @@ import JefeCedi from '../Pages/JefeCedi';
 import GestionarFactura from '../Pages/GestionarFactura';
 import RevisionFinal from '../Pages/RevisionFinal';
 import Historial from '../Pages/Historial';
-import PedidosParciales from '../PageS/PedidosParciales';
+import PedidosParciales from '../Pages/PedidosParciales';
 import Notas from '../Pages/Notas';
 
 const JefeCediRoutes = () => {

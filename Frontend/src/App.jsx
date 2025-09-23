@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from '../src/context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard';
 import BodegaRoutes from '../subsites/Bodega/Routes/BodegaRoutes';
 import JefeBodega from '../subsites/JefeBodega/Pages/JefeBodega';
 import BodegaJefeRoutes from '../subsites/BodegaJefe/Routes/BodegaJefeRoutes';
@@ -14,7 +14,7 @@ import VendedorRoutes from '../subsites/Vendedores/Routes/VendedorRoutes';
 import MensajeriaRoutes from '../subsites/Mensajeria/Routes/MensajeriaRoutes';
 import MostradorRoutes from '../subsites/Mostrador/Routes/MostradorRoutes';
 import FacturacionRoutes from '../subsites/Facturacion/Routes/FacturacionRoutes';
-import NotasPage from '../subsites/Notas/Pages/NotasPage';
+import NotasPage from '../subsites/notas/Pages/NotasPage';
 import Register from './components/Register';
 
 const App = () => {
