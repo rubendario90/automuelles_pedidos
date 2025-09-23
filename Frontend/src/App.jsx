@@ -13,6 +13,7 @@ import DespachosRoutes from '../subsites/Despachos/Routes/DespachosRoutes';
 import VendedorRoutes from '../subsites/Vendedores/Routes/VendedorRoutes';
 import MensajeriaRoutes from '../subsites/Mensajeria/Routes/MensajeriaRoutes';
 import MostradorRoutes from '../subsites/Mostrador/Routes/MostradorRoutes';
+import FacturacionRoutes from '../subsites/Facturacion/Routes/FacturacionRoutes';
 import NotasPage from '../subsites/Notas/Pages/NotasPage';
 import Register from './components/Register';
 
@@ -108,6 +109,14 @@ const App = () => {
                         element={
                             <ProtectedRoute role="Mostrador">
                                 <MostradorRoutes />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/Facturacion/*"
+                        element={
+                            <ProtectedRoute role="Facturacion">
+                                <FacturacionRoutes />
                             </ProtectedRoute>
                         }
                     />

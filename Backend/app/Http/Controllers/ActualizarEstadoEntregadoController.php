@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\FacturaPago;
 
 class ActualizarEstadoEntregadoController extends Controller
 {
@@ -32,7 +33,7 @@ class ActualizarEstadoEntregadoController extends Controller
         
         $facturaId = $factura->id;
     
-        DB::transaction(function () use ($facturaId, $transaccion, $userId) {
+        DB::transaction(function () use ($facturaId, $transaccion, $documento, $userId) {
             DB::table('facturas_asignadas')
                 ->where('factura_id', $facturaId)
                 ->update([
@@ -47,6 +48,19 @@ class ActualizarEstadoEntregadoController extends Controller
                 'new_status' => 'Entregado',
                 'changed_at' => now(),
             ]);
+
+            // Create payment record as pending when invoice is delivered
+            FacturaPago::updateOrCreate(
+                [
+                    'factura_id' => $facturaId,
+                    'documento' => $documento,
+                    'transaccion' => $transaccion,
+                ],
+                [
+                    'mensajero_id' => $userId,
+                    'estado_pago' => 'pendiente',
+                ]
+            );
         });
     
         return response()->json(['message' => 'Factura actualizada a Entregado correctamente.']);

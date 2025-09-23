@@ -28,6 +28,7 @@ use App\Http\Controllers\RevisionMensajeriaController;
 use App\Http\Controllers\DocumentDomicilioController;
 use App\Http\Controllers\DocumentSignController;
 use App\Http\Controllers\PowerBicontroller;
+use App\Http\Controllers\FacturacionController;
 use App\Http\Controllers\NotasController;
 use App\Models\User;
 
@@ -108,4 +109,11 @@ Route::middleware('throttle:10000,1')->group(function () {
     Route::put('/notas/{id}/crear', [NotasController::class, 'crear']);
     Route::get('/contar-pendientes', [NotasController::class, 'contarPendientes']);
     Route::get('/notas-historial', [NotasController::class, 'historial']);
+
+    // Rutas para Facturación
+    Route::get('/facturas-pagadas', [FacturacionController::class, 'facturasPagadas']);
+    Route::get('/facturas-pendientes-pago', [FacturacionController::class, 'facturasPendientesPago']);
+    Route::post('/reportar-pago-factura', [FacturacionController::class, 'reportarPago']);
+    Route::get('/estadisticas-pago', [FacturacionController::class, 'estadisticasPago']);
+    Route::get('/notificaciones-pago', [FacturacionController::class, 'notificacionesPago']);
 });
