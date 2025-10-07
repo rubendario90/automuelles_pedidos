@@ -1,0 +1,71 @@
+/* Contenedor principal */
+.historial-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.historial-container .navbar {
+  width: 70px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  margin-left: 70px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Tabla */
+.table {
+  font-size: 0.9rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #0d6efd;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+/* Botones */
+.btn {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+}

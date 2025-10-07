@@ -1,0 +1,66 @@
+/* Contenedor principal con Sidebar a la izquierda */
+.garantias-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.garantias-container .navbar {
+  width: 70px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* Contenido principal a la derecha */
+.main-content {
+  flex: 1;
+  margin-left: 70px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Estilos para tarjetas */
+.card {
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.bg-custom {
+  background-color: #0d6efd;
+}
+
+.text-custom-color {
+  color: #0d6efd;
+}
+
+.btn-custom {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
